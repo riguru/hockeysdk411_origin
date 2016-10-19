@@ -187,7 +187,7 @@ public class Constants {
             ApplicationInfo appInfo = packageManager.getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA);
             Bundle metaData = appInfo.metaData;
             if (metaData != null) {
-                return metaData.getInt(BUNDLE_BUILD_NUMBER, 0);
+                return metaData.getLong(BUNDLE_BUILD_NUMBER, 0);
             }
         } catch (PackageManager.NameNotFoundException e) {
             HockeyLog.error("Exception thrown when accessing the application info:");
